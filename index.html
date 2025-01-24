@@ -5,70 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>What a Leak!</title>
-    <style>
-        ::-webkit-scrollbar {
-            display: none;
+    <link id="stylesheet" rel="stylesheet" type="text/css" href="/css/desktop.css">
+    <script>
+        function loadResponsiveCSS() {
+            const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+            const stylesheet = document.getElementById('stylesheet');
+            stylesheet.href = isMobile ? '/css/mobile.css' : '/css/desktop.css';
         }
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            background-color: #000;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-        }
-        .scroll-container {
-            height: 100%;
-            width: 100%;
-            overflow-y: scroll;
-            scroll-snap-type: y mandatory;
-        }
-        .scroll-section {
-            height: 100%;
-            width: 100%;
-            scroll-snap-align: start;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .background {
-            background-image: url('/assets/wal-render-17-lowres.png');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding-left: 50px;
-        }
-        .content {
-            color: white;
-            padding: 100px;
-        }
-        .content h1 {
-            margin: 0;
-            font-size: 3em;
-        }
-        .content p {
-            margin: 10px 0 0;
-            font-size: 1.5em;
-        }
-        .discover-btn {
-            margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 1.2em;
-            color: white;
-            background: transparent;
-            border: 2px solid white;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .discover-btn:hover {
-            background: white;
-            color: black;
-        }
-    </style>
+        window.onload = loadResponsiveCSS;
+    </script>
 </head>
 <body>
     <div class="scroll-container">

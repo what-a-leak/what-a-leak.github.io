@@ -1,0 +1,70 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.scroll-container {
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroll-section {
+    height: 100%;
+    width: 100%;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.background {
+    background-image: url('/assets/wal-render-17-lowres.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.content {
+    color: white;
+    padding: 20px;
+}
+
+.content h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.content p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+.discover-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 1em;
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.discover-btn:hover {
+    background: white;
+    color: black;
+}
